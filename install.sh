@@ -9,13 +9,6 @@ else
     paru -S git wget python3 python-pip python-pytorch-rocm python-torchvision-rocm opencl-mesa rocm-cmake rocblas rocm-core rocm-device-libs rocm-hip-runtime rocm-language-runtime rocm-llvm rocm-opencl-runtime rocminfo hip hsa-rocr rocm-clang-ocl roctracer rocm-smi-lib rocprofiler hsa-amd-aqlprofile --noconfirm --needed
 fi
 
-# Proprietary driver
-#if (cat /proc/cpuinfo | grep avx2); then
-#    paru -S git wget python3 python-pip python-pytorch-opt-rocm python-torchvision-rocm amdgpu-pro-oglp amf-amdgpu-pro lib32-amdgpu-pro-oglp lib32-opencl-legacy-amdgpu-pro lib32-vulkan-amdgpu-pro opencl-legacy-amdgpu-pro vulkan-amdgpu-pro rocm-cmake rocblas rocm-core rocm-device-libs rocm-hip-runtime rocm-language-runtime rocm-llvm rocm-opencl-runtime rocminfo hip hsa-rocr rocm-clang-ocl roctracer rocm-smi-lib rocprofiler hsa-amd-aqlprofile --noconfirm --needed
-#else
-#    paru -S git wget python3 python-pip python-pytorch-rocm python-torchvision-rocm amdgpu-pro-oglp amf-amdgpu-pro lib32-amdgpu-pro-oglp lib32-opencl-legacy-amdgpu-pro lib32-vulkan-amdgpu-pro opencl-legacy-amdgpu-pro vulkan-amdgpu-pro rocm-cmake rocblas rocm-core rocm-device-libs rocm-hip-runtime rocm-language-runtime rocm-llvm rocm-opencl-runtime rocminfo hip hsa-rocr rocm-clang-ocl roctracer rocm-smi-lib rocprofiler hsa-amd-aqlprofile --noconfirm --needed
-#fi
-
 export MAKEFLAGS="-j$(nproc)"
 export NINJAFLAGS="-j$(nproc)"
 export AMDGPU_TARGETS="gfx803"
