@@ -55,4 +55,4 @@ pip install markupsafe==2.0.1
 echo $'#!/bin/bash\npython launch.py --skip-torch-cuda-test' > webui-py.sh
 chmod +x ./webui-py.sh
 
-echo $'\e[1;32mDone!\e[0m\nNow it can be launched via:\n$ source venv/bin/activate\n$ #./webui-py.sh'
+echo $'\e[1;32mDone!\e[0m\nNow it can be launched via:\n$ source venv/bin/activate\n$ ./webui-py.sh'
